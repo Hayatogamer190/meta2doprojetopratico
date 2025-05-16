@@ -1,0 +1,79 @@
+import React from 'react';
+
+const CriarVeiculo = () => {
+    return (
+        <>
+            <div className="container py-4">
+                <header className="mb-4">
+                    <h1 className="mb-0"><i className="bi bi-plus-circle-fill"></i> Adicionar Novo Veículo</h1>
+                    <p className="text-muted">Preencha os dados do novo veículo.</p>
+                </header>
+
+                <div className="card shadow-sm">
+                    <div className="card-body">
+                        <form action="veiculos_lista.html" method="POST">
+                            <div className="row g-3">
+                                <div className="col-md-6">
+                                    <label htmlFor="marca" className="form-label">Marca*</label>
+                                    <input type="text" className="form-control" id="marca" name="marca" placeholder="Ex: Mercedes-Benz" required />
+                                </div>
+                                <div className="col-md-6">
+                                    <label htmlFor="modelo" className="form-label">Modelo*</label>
+                                    <input type="text" className="form-control" id="modelo" name="modelo" placeholder="Ex: Actros" required />
+                                </div>
+                                <div className="col-md-6">
+                                    <label htmlFor="matricula" className="form-label">Matrícula*</label>
+                                    <input type="text" className="form-control" id="matricula" name="matricula" placeholder="XX-00-YY" required />
+                                </div>
+                                <div className="col-md-6">
+                                    <label htmlFor="ano" className="form-label">Ano de Fabrico*</label>
+                                    <input type="number" className="form-control" id="ano" name="ano" placeholder="AAAA" min="1900" max="2099" required />
+                                </div>
+                                <div className="col-md-6">
+                                    <label htmlFor="tipo" className="form-label">Tipo de Veículo*</label>
+                                    <select className="form-select" id="tipo" name="tipo" required>
+                                        <option value="" disabled selected>Escolha...</option>
+                                        <option value="Ligeiro Passageiros">Ligeiro Passageiros</option>
+                                        <option value="Ligeiro Mercadorias">Ligeiro Mercadorias</option>
+                                        <option value="Pesado Mercadorias">Pesado Mercadorias</option>
+                                        <option value="Máquina Industrial">Máquina Industrial</option>
+                                        <option value="Outro">Outro</option>
+                                    </select>
+                                </div>
+                                <div className="col-md-6">
+                                    <label htmlFor="estado" className="form-label">Estado*</label>
+                                    <select className="form-select" id="estado" name="estado" required>
+                                        <option value="Operacional" selected>Operacional</option>
+                                        <option value="Em Manutenção">Em Manutenção</option>
+                                        <option value="Fora de Serviço">Fora de Serviço</option>
+                                        <option value="Vendido">Vendido</option>
+                                        <option value="Abatido">Abatido</option>
+                                    </select>
+                                </div>
+                                <div className="col-md-6">
+                                    <label htmlFor="localidade" className="form-label">Localidade*</label>
+                                    <input type="text" className="form-control" id="localidade" name="localidade" placeholder="Ex: Lisboa" required/>
+                                </div>
+                                <div className="col-md-6">
+                                    <label htmlFor="ultima_manutencao" className="form-label">Data da Última Manutenção*</label>
+                                    <input type="date" className="form-control" id="ultima_manutencao" name="ultima_manutencao" required/>
+                                </div>
+                            </div>
+
+                            <div className="mt-4 pt-3 border-top d-flex justify-content-end">
+                                <a href="/veiculos" className="btn btn-outline-secondary me-2">
+                                    <i className="bi bi-x-circle"></i> Cancelar
+                                </a>
+                                <button type="submit" className="btn btn-success">
+                                    <i className="bi bi-check-circle-fill"></i> Guardar Veículo
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </>
+    )
+}
+
+export default CriarVeiculo;
