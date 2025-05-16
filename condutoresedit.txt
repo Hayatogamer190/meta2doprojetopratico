@@ -1,0 +1,52 @@
+import React from 'react';
+
+const EditarCondutor = () => {
+    return (
+        <>
+            <div className="main-content container py-4">
+                <header className="mb-4">
+                    <h1 className="mb-0"><i className="bi bi-pencil-fill"></i> Editar Condutor <span className="text-primary">(Maria Santos)</span></h1>
+                    <p className="text-muted">Atualize os dados do condutor.</p>
+                </header>
+
+                <div className="card shadow-sm">
+                    <div className="card-body">
+                        <form action="/condutores" method="POST">
+                            <input type="hidden" name="id" value="1"/> 
+                            <div className="row g-3">
+                                <div className="col-md-12">
+                                    <label htmlFor="nome" className="form-label">Nome Completo*</label>
+                                    <input type="text" className="form-control" id="nome" name="nome" value="Maria Santos" required />
+                                </div>
+                                <div className="col-md-6">
+                                    <label htmlFor="carta_de_conducao" className="form-label">Nº da Carta de Condução*</label>
+                                    <input type="text" className="form-control" id="carta_de_conducao" name="carta_de_conducao" value="P-789012" required />
+                                </div>
+                                <div className="col-md-6">
+                                    <label htmlFor="contacto" className="form-label">Contacto Telefónico*</label>
+                                    <input type="tel" className="form-control" id="contacto" name="contacto" value="934567890" required />
+                                </div>
+                                <div className="col-md-12">
+                                    <label htmlFor="veiculo_atual" className="form-label">Veículo Atualmente Atribuído (Matrícula)</label>
+                                    <select className="form-select" id="veiculo" name="veiculo" required>
+                                        <option value="" disabled>Deixe em branco se não atribuído ou selecione um veículo</option>
+                                        <option value="2">MH-15-56 (Opel Corsa, Ligeiro, Operacional)</option>
+                                        <option value="3" selected>AM-15-AS (Mercedes A200, Ligeiro, Operacional)</option>
+                                    </select>
+                                        <small className="form-text text-muted">Numa aplicação real, isto seria um seletor com veículos disponíveis.</small>
+                                </div>
+                            </div>
+
+                                <div className="mt-4 pt-3 border-top d-flex justify-content-end">
+                                    <a href="/condutores" className="btn btn-outline-secondary me-2"><i className="bi bi-x-circle"></i> Cancelar</a>
+                                    <button type="submit" className="btn btn-primary"><i className="bi bi-check-circle-fill"></i> Atualizar Condutor</button>
+                                </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </>
+    )
+}
+
+export default EditarCondutor;
