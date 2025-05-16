@@ -1,0 +1,70 @@
+import React from 'react';
+
+const EditarPagamento = () => {
+    return (
+        <>
+            <div className="container py-4">
+                <header className="mb-4">
+                    <h1 className="mb-0"><i className="bi bi-pencil-fill"></i> Editar Pagamento <span className="text-primary">(ID: 2 - IUC <i classNameName="bi bi-arrow-right-short"></i> CC-22-DD)</span></h1>
+                    <p className="text-muted">Atualize os detalhes do pagamento.</p>
+                </header>
+
+                <div className="card shadow-sm">
+                    <div className="card-body">
+                        <form action="pagamentos_lista.html" method="POST" onsubmit="simularEnvioEdicao(event)">
+                            <input type="hidden" name="id" value="2" />
+                                <div className="row g-3">
+                                    <div className="col-md-6">
+                                        <label htmlFor="veiculo" className="form-label">Veículo Associado*</label>
+                                        <select className="form-select" id="veiculo" name="veiculo" required>
+                                            <option value="" disabled>Selecione um veículo...</option>
+                                            <option value="2" selected>MH-15-56 (Opel Corsa)</option>
+                                            <option value="3">AM-15-AS (Mercedes A200)</option>
+                                            <option value="4">XY-99-ZZ (Volvo FH)</option>
+                                        </select>
+                                    </div>
+                                    <div className="col-md-6">
+                                        <label htmlFor="tipo_de_pagamento" className="form-label">Tipo de Pagamento*</label>
+                                        <select className="form-select" id="tipo_de_pagamento" name="tipo_de_pagamento" required>
+                                            <option value="Seguro Automóvel">Seguro Automóvel</option>
+                                            <option value="IUC" selected>IUC (Imposto Único de Circulação)</option>
+                                            <option value="Manutenção Programada">Manutenção Programada</option>
+                                            <option value="Reparação Extraordinária">Reparação Extraordinária</option>
+                                            <option value="Portagens">Portagens</option>
+                                            <option value="Combustível">Combustível</option>
+                                            <option value="Financiamento/Leasing">Financiamento/Leasing</option>
+                                            <option value="Multa">Multa</option>
+                                            <option value="Outro">Outro</option>
+                                        </select>
+                                    </div>
+                                    <div className="col-md-6">
+                                        <label htmlFor="valor" className="form-label">Valor (€)*</label>
+                                        <input type="number" className="form-control" id="valor" name="valor" step="0.01" value="145.50" required />
+                                    </div>
+                                    <div className="col-md-6">
+                                        <label htmlFor="data_vencimento" className="form-label">Data de Vencimento*</label>
+                                        <input type="date" className="form-control" id="data_vencimento" name="data_vencimento" value="2025-07-31" required />
+                                    </div>
+                                    <div className="col-md-6">
+                                        <label htmlFor="estado" className="form-label">Estado do Pagamento*</label>
+                                        <select className="form-select" id="estado" name="estado" required>
+                                            <option value="Pendente" selected>Pendente</option>
+                                            <option value="Pago">Pago</option>
+                                            <option value="Vencido">Vencido (Atrasado)</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div className="mt-4 pt-3 border-top d-flex justify-content-end">
+                                    <a href="/pagamentos" className="btn btn-outline-secondary me-2"><i className="bi bi-x-circle"></i> Cancelar</a>
+                                    <button type="submit" className="btn btn-primary"><i className="bi bi-check-circle-fill"></i> Atualizar Pagamento</button>
+                                </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </>
+    )
+}
+
+export default EditarPagamento;
