@@ -1,0 +1,83 @@
+import {Routes, Route} from 'react-router-dom'
+import Navbar from './components/navbar/navbar'
+import Footer from './components/footer/footer'
+import HomePage from './pages/index'
+
+{/* Veículos */}
+import ListarVeiculos from './pages/veiculos/list'
+import VerVeiculo from './pages/veiculos/view'
+import CriarVeiculo from './pages/veiculos/create'
+import EditarVeiculo from './pages/veiculos/edit'
+
+{/* Condutores */}
+import ListarCondutores from './pages/condutores/list'
+import VerCondutor from './pages/condutores/view'
+import CriarCondutor from './pages/condutores/create'
+import EditarCondutor from './pages/condutores/edit'
+
+{/* Cargas */}
+import ListarCargas from './pages/cargas/list'
+import VerCarga from './pages/cargas/view'
+import CriarCarga from './pages/cargas/create'
+import EditarCarga from './pages/cargas/edit'
+
+{/* Manutençoes */}
+import ListarManutencoes from './pages/manutencoes/list'
+import VerManutencao from './pages/manutencoes/view'
+import CriarManutencao from './pages/manutencoes/create'
+import EditarManutencao from './pages/manutencoes/edit'
+
+{/* Pagamentos */}
+import ListarPagamentos from './pages/pagamentos/list'
+import VerPagamento from './pages/pagamentos/view'
+import CriarPagamento from './pages/pagamentos/create'
+import EditarPagamento from './pages/pagamentos/edit'
+
+function App() {
+  return (
+    <>
+    <div className="d-flex flex-column min-vh-100">
+      <Navbar />
+      <div className="flex-grow-1 d-flex flex-column justify-content-center">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+
+          {/* Veículos */}
+          <Route path="/veiculos" element={<ListarVeiculos />} />
+          <Route path="/veiculo" element={<VerVeiculo />} />
+          <Route path="/veiculo/create" element={<CriarVeiculo />} />
+          <Route path="/veiculo/edit" element={<EditarVeiculo />} />
+
+          {/* Condutores */}
+          <Route path="/condutores" element={<ListarCondutores />} />
+          <Route path="/condutor" element={<VerCondutor />} />
+          <Route path="/condutor/create" element={<CriarCondutor />} />
+          <Route path="/condutor/edit" element={<EditarCondutor />} />
+
+          {/* Cargas */}
+          <Route path="/cargas" element={<ListarCargas />} />
+          <Route path="/carga" element={<VerCarga />} />
+          <Route path="/carga/create" element={<CriarCarga />} />
+          <Route path="/carga/edit" element={<EditarCarga />} />
+
+          {/* Manutençoes */}
+          <Route path="/manutencoes" element={<ListarManutencoes />} />
+          <Route path="/manutencao" element={<VerManutencao />} />
+          <Route path="/manutencao/create" element={<CriarManutencao />} />
+          <Route path="/manutencao/edit" element={<EditarManutencao />} />
+
+          {/* Pagamentos */}
+          <Route path="/pagamentos" element={<ListarPagamentos />} />
+          <Route path="/pagamento" element={<VerPagamento />} />
+          <Route path="/pagamento/create" element={<CriarPagamento />} />
+          <Route path="/pagamento/edit" element={<EditarPagamento />} />
+
+        </Routes>
+      </div>
+      <Footer />
+    </div>
+    </>
+  )
+}
+
+export default App
