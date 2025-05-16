@@ -1,0 +1,147 @@
+import React from 'react';
+
+const ListarVeiculos = () => {
+    return (
+        <>
+            <div className="container my-4">
+                <header className="d-flex justify-content-between align-items-center mb-4">
+                    <h1 className="mb-0"><i className="bi bi-truck"></i> Lista de Veículos</h1>
+                    <a href="/veiculo/create" className="btn btn-success">
+                        <i className="bi bi-plus-circle-fill"></i> Adicionar Novo Veículo
+                    </a>
+                </header>
+
+                <div className="card shadow-sm mb-4">
+                    <div className="card-header py-3">
+                        <h5 className="mb-0"><i className="bi bi-table"></i> Veículos Registados</h5>
+                    </div>
+                    <div className="card-body">
+                        <div className="table-responsive">
+                            <table className="table table-hover table-sm align-middle">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Matrícula</th>
+                                        <th>Marca</th>
+                                        <th>Modelo</th>
+                                        <th>Ano</th>
+                                        <th>Tipo</th>
+                                        <th>Estado</th>
+                                        <th className="text-end">Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>AA-11-BB</td>
+                                        <td>Mercedes</td>
+                                        <td>A200</td>
+                                        <td>2020</td>
+                                        <td>Ligeiro Passageiros</td>
+                                        <td><span className="badge text-bg-success">Operacional</span></td>
+                                        <td className="text-end">
+                                            <a href="/veiculo" className="btn btn-sm btn-outline-info me-1" title="Ver Detalhes">
+                                                <i className="bi bi-eye"></i>
+                                            </a>
+                                            <a href="/veiculo/edit" className="btn btn-sm btn-outline-primary me-1" title="Editar">
+                                                <i className="bi bi-pencil"></i>
+                                            </a>
+                                            <a href="/veiculos" className="btn btn-sm btn-outline-danger" title="Eliminar">
+                                                <i className="bi bi-trash"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>CC-22-DD</td>
+                                        <td>Opel</td>
+                                        <td>Corsa</td>
+                                        <td>2019</td>
+                                        <td>Ligeiro Passageiros</td>
+                                        <td><span className="badge text-bg-warning">Em Manutenção</span></td>
+                                        <td className="text-end">
+                                            <a href="/veiculo" className="btn btn-sm btn-outline-info me-1" title="Ver Detalhes">
+                                                <i className="bi bi-eye"></i>
+                                            </a>
+                                            <a href="/veiculo/edit" className="btn btn-sm btn-outline-primary me-1" title="Editar">
+                                                <i className="bi bi-pencil"></i>
+                                            </a>
+                                            <a href="/veiculos" className="btn btn-sm btn-outline-danger" title="Eliminar">
+                                                <i className="bi bi-trash"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>KK-66-LL</td>
+                                        <td>Renault</td>
+                                        <td>Clio</td>
+                                        <td>2010</td>
+                                        <td>Ligeiro Passageiros</td>
+                                        <td><span className="badge text-bg-secondary">Vendido</span></td>
+                                        <td className="text-end">
+                                            <a href="/veiculo" className="btn btn-sm btn-outline-info me-1" title="Ver Detalhes">
+                                                <i className="bi bi-eye"></i>
+                                            </a>
+                                            <a href="/veiculo/edit" className="btn btn-sm btn-outline-primary me-1" title="Editar">
+                                                <i className="bi bi-pencil"></i>
+                                            </a>
+                                            <a href="/veiculos" className="btn btn-sm btn-outline-danger" title="Eliminar">
+                                                <i className="bi bi-trash"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>II-55-JJ</td>
+                                        <td>Ford</td>
+                                        <td>Transit</td>
+                                        <td>2015</td>
+                                        <td>Ligeiro Mercadorias</td>
+                                        <td><span className="badge text-bg-danger">Fora de Serviço</span></td>
+                                        <td className="text-end">
+                                            <a href="/veiculo" className="btn btn-sm btn-outline-info me-1" title="Ver Detalhes">
+                                                <i className="bi bi-eye"></i>
+                                            </a>
+                                            <a href="/veiculo/edit" className="btn btn-sm btn-outline-primary me-1" title="Editar">
+                                                <i className="bi bi-pencil"></i>
+                                            </a>
+                                            <a href="/veiculos" className="btn btn-sm btn-outline-danger" title="Eliminar">
+                                                <i className="bi bi-trash"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>MM-77-NN</td>
+                                        <td>Fiat</td>
+                                        <td>Punto</td>
+                                        <td>2005</td>
+                                        <td>Ligeiro Passageiros</td>
+                                        <td><span className="badge text-bg-dark">Abatido</span></td>
+                                        <td className="text-end">
+                                            <a href="/veiculo" className="btn btn-sm btn-outline-info me-1" title="Ver Detalhes">
+                                                <i className="bi bi-eye"></i>
+                                            </a>
+                                            <a href="/veiculo/edit" className="btn btn-sm btn-outline-primary me-1" title="Editar">
+                                                <i className="bi bi-pencil"></i>
+                                            </a>
+                                            <a href="/veiculos" className="btn btn-sm btn-outline-danger" title="Eliminar">
+                                                <i className="bi bi-trash"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div className="card-footer text-center">
+                        <small className="text-muted">Fim da lista. Existem 5 veículos registados.</small>
+                    </div>
+                </div>
+            </div>
+        </>
+    );
+};
+
+export default ListarVeiculos;
