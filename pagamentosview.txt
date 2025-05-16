@@ -1,0 +1,59 @@
+import React from 'react';
+
+const VerPagamento = () => {
+    return (
+        <>
+            <main className="container py-4">
+                <header className="d-flex justify-content-between align-items-center mb-4">
+                    <h1 className="mb-0"><i className="bi bi-credit-card-2-front-fill"></i> Detalhes do Pagamento <span className="text-primary">(ID: 2)</span></h1>
+                    <a href="/pagamentos" className="btn btn-outline-secondary"><i className="bi bi-arrow-left-circle"></i> Voltar à Lista</a>
+                </header>
+
+                <div className="card shadow-sm">
+                    <div className="card-header">
+                        <h5 className="mb-0"><i className="bi bi-info-circle-fill"></i> IUC para o Veículo CC-22-DD</h5>
+                    </div>
+                    <div className="card-body">
+                        <div className="row details-list">
+                            <div className="col-md-12">
+                                <dl className="row">
+                                    <dt className="col-sm-4 col-lg-3">Tipo de Pagamento:</dt>
+                                    <dd className="col-sm-8 col-lg-9">IUC (Imposto Único de Circulação)</dd>
+
+                                    <dt className="col-sm-4 col-lg-3">Valor:</dt>
+                                    <dd className="col-sm-8 col-lg-9">€145,50</dd>
+
+                                    <dt className="col-sm-4 col-lg-3">Data de Vencimento:</dt>
+                                    <dd className="col-sm-8 col-lg-9">31/07/2025</dd>
+
+                                    <dt className="col-sm-4 col-lg-3">Estado do Pagamento:</dt>
+                                    <dd className="col-sm-8 col-lg-9"><span className="badge text-bg-warning">Pendente</span></dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <hr />
+                        <div className="section-title">
+                            <h5 className="mt-4"><i className="bi bi bi-truck"></i> Veículo Atribuído</h5>
+                        </div>
+                        <ul className="list-group">
+                            <li className="list-group-item">
+                                <div className="d-flex w-100 justify-content-between align-items-center">
+                                    <div>
+                                        <h6 className="mb-1">Mercedes A200 (AA-11-BB)</h6>
+                                        <small className="text-muted">Tipo: Ligeiro Passageiros</small>
+                                    </div>
+                                    <span className="badge text-bg-success">Operacional</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div className="card-footer text-end">
+                        <a href="/pagamento/edit" className="btn btn-primary"><i className="bi bi-pencil-fill"></i> Editar Pagamento</a>
+                    </div>
+                </div>
+            </main>
+        </>
+    )
+}
+
+export default VerPagamento;
