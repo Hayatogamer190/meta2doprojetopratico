@@ -1,0 +1,55 @@
+import React from 'react';
+
+const CriarManutencao = () => {
+    return (
+        <>
+            <div className="container py-4">
+                <header className="mb-4">
+                    <h1 className="mb-0"><i className="bi bi-plus-circle-fill"></i> Registar Nova Manutenção</h1>
+                    <p className="text-muted">Preencha os detalhes da manutenção realizada ou agendada.</p>
+                </header>
+
+                <div className="card shadow-sm">
+                    <div className="card-body">
+                        <form action="manutencoes_lista.html" method="POST">
+                            <div className="row g-3">
+                                <div className="col-md-12">
+                                    <label htmlFor="veiculo" className="form-label">Veículo*</label>
+                                    <select className="form-select" id="veiculo" name="veiculo" required>
+                                        <option value="" disabled selected>Selecione o veículo...</option>
+                                        <option value="1">AA-11-BB (Mercedes A200)</option>
+                                        <option value="2">CC-22-DD (Opel Corsa)</option>
+                                        <option value="3">AM-15-AS (Mercedes A200)</option>
+                                    </select>
+                                </div>
+                                <div className="col-md-12">
+                                    <label htmlFor="tipo_de_manutencao" className="form-label">Tipo de Manutenção*</label>
+                                    <input type="text" className="form-control" id="tipo_de_manutencao" name="tipo_de_manutencao" placeholder="Ex: Mudança de óleo, Reparação de travões, Inspeção periódica" required />
+                                </div>
+                                <div className="col-md-6">
+                                    <label htmlFor="custo" className="form-label">Custo (€)*</label>
+                                    <input type="number" className="form-control" id="custo" name="custo" step="0.01" placeholder="Ex: 150.75" required />
+                                </div>
+                                <div className="col-md-6">
+                                    <label htmlFor="data_manutencao" className="form-label">Data da Manutenção*</label>
+                                    <input type="date" className="form-control" id="data_manutencao" name="data_manutencao" required />
+                                </div>
+                                <div className="col-md-6">
+                                    <label htmlFor="proxima_manutencao" className="form-label">Data da Próxima Manutenção*</label>
+                                    <input type="date" className="form-control" id="proxima_manutencao" name="proxima_manutencao" required/>
+                                </div>
+                            </div>
+
+                            <div className="mt-4 pt-3 border-top d-flex justify-content-end">
+                                <a href="/manutencoes" className="btn btn-outline-secondary me-2"><i className="bi bi-x-circle"></i> Cancelar</a>
+                                <button type="submit" className="btn btn-success"><i className="bi bi-check-circle-fill"></i> Guardar Manutenção</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </>
+    )
+}
+
+export default CriarManutencao;
