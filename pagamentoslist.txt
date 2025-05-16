@@ -1,0 +1,103 @@
+import React from 'react';
+
+const ListarPagamentos = () => {
+    return (
+        <>
+            <div className="container py-4">
+                <header className="d-flex justify-content-between align-items-center mb-4">
+                    <h1 className="mb-0"><i className="bi bi-credit-card-fill"></i> Lista de Pagamentos</h1>
+                    <a href="/pagamento/create" className="btn btn-success">
+                        <i className="bi bi-plus-circle-fill"></i> Registar Novo Pagamento
+                    </a>
+                </header>
+
+                <div className="card shadow-sm">
+                    <div className="card-header py-3">
+                        <h5 className="mb-0"><i className="bi bi-table"></i> Pagamentos Registados</h5>
+                    </div>
+                    <div className="card-body">
+                        <div className="table-responsive">
+                            <table className="table table-hover table-sm align-middle">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Veículo (Matrícula)</th>
+                                        <th>Tipo de Pagamento</th>
+                                        <th>Valor</th>
+                                        <th>Data Vencimento</th>
+                                        <th>Estado</th>
+                                        <th className="text-end">Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>AA-11-BB</td>
+                                        <td>Seguro Anual</td>
+                                        <td>350,00 €</td>
+                                        <td>15/06/2025</td>
+                                        <td><span className="badge text-bg-success">Pago</span></td>
+                                        <td className="text-end">
+                                            <a href="/pagamento" className="btn btn-sm btn-outline-info me-1" title="Ver Detalhes">
+                                                <i className="bi bi-eye"></i>
+                                            </a>
+                                            <a href="/pagamento/edit" className="btn btn-sm btn-outline-primary me-1" title="Editar">
+                                                <i className="bi bi-pencil"></i>
+                                            </a>
+                                            <a href="/pagamentos" className="btn btn-sm btn-outline-danger" title="Eliminar">
+                                                <i className="bi bi-trash"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>CC-22-DD</td>
+                                        <td>IUC</td>
+                                        <td>145,50 €</td>
+                                        <td>31/07/2025</td>
+                                        <td><span className="badge text-bg-warning">Pendente</span></td>
+                                        <td className="text-end">
+                                            <a href="/pagamento" className="btn btn-sm btn-outline-info me-1" title="Ver Detalhes">
+                                                <i className="bi bi-eye"></i>
+                                            </a>
+                                            <a href="/pagamento/edit" className="btn btn-sm btn-outline-primary me-1" title="Editar">
+                                                <i className="bi bi-pencil"></i>
+                                            </a>
+                                            <a href="/pagamentos" className="btn btn-sm btn-outline-danger" title="Eliminar">
+                                                <i className="bi bi-trash"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>AM-15-AS</td>
+                                        <td>Manutenção</td>
+                                        <td>190,00 €</td>
+                                        <td>17/12/2024</td>
+                                        <td><span className="badge text-bg-danger">Vencido</span></td>
+                                        <td className="text-end">
+                                            <a href="/pagamento" className="btn btn-sm btn-outline-info me-1" title="Ver Detalhes">
+                                                <i className="bi bi-eye"></i>
+                                            </a>
+                                            <a href="/pagamento/edit" className="btn btn-sm btn-outline-primary me-1" title="Editar">
+                                                <i className="bi bi-pencil"></i>
+                                            </a>
+                                            <a href="/pagamentos" className="btn btn-sm btn-outline-danger" title="Eliminar">
+                                                <i className="bi bi-trash"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div className="card-footer text-center">
+                        <small className="text-muted">Fim da lista. Existem 5 veículos registados.</small>
+                    </div>
+                </div>
+            </div>
+        </>
+    );
+};
+
+export default ListarPagamentos;
