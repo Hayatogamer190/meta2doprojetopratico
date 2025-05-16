@@ -1,0 +1,99 @@
+import React from 'react';
+
+const ListarCondutores = () => {
+    return (
+        <>
+            <div className="container py-4">
+                <header className="d-flex justify-content-between align-items-center mb-4">
+                    <h1 className="mb-0"><i className="bi bi-person-lines-fill"></i> Lista de Condutores</h1>
+                    <a href="/condutor/create" className="btn btn-success">
+                        <i className="bi bi-person-plus-fill"></i> Adicionar Novo Condutor
+                    </a>
+                </header>
+
+                <div className="card shadow-sm">
+                    <div className="card-header py-3">
+                        <h5 className="mb-0"><i className="bi bi-table"></i> Condutores Registados</h5>
+                    </div>
+                    <div className="card-body">
+                        <div className="table-responsive">
+                            <table className="table table-hover table-sm align-middle">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Nome</th>
+                                        <th>Nº Carta Condução</th>
+                                        <th>Contacto</th>
+                                        <th>Veículo Atual</th>
+                                        <th className="text-end">Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Maria Santos</td>
+                                        <td>P-789012</td>
+                                        <td>934567890</td>
+                                        <td><span className="badge text-bg-primary">AA-11-BB</span></td>
+                                        <td className="text-end">
+                                            <a href="/condutor" className="btn btn-sm btn-outline-info me-1" title="Ver Detalhes">
+                                                <i className="bi bi-eye"></i>
+                                            </a>
+                                            <a href="/condutor/edit" className="btn btn-sm btn-outline-primary me-1" title="Editar">
+                                                <i className="bi bi-pencil"></i>
+                                            </a>
+                                            <a href="/condutores" className="btn btn-sm btn-outline-danger" title="Eliminar">
+                                                <i className="bi bi-trash"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Carlos Pereira</td>
+                                        <td>P-345678</td>
+                                        <td>965678901</td>
+                                        <td><span className="badge text-bg-success">Disponível</span></td>
+                                        <td className="text-end">
+                                            <a href="/condutor" className="btn btn-sm btn-outline-info me-1" title="Ver Detalhes">
+                                                <i className="bi bi-eye"></i>
+                                            </a>
+                                            <a href="/condutor/edit" className="btn btn-sm btn-outline-primary me-1" title="Editar">
+                                                <i className="bi bi-pencil"></i>
+                                            </a>
+                                            <a href="/condutores" className="btn btn-sm btn-outline-danger" title="Eliminar">
+                                                <i className="bi bi-trash"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>João Silva</td>
+                                        <td>L-123456</td>
+                                        <td>912345678</td>
+                                        <td><span className="badge text-bg-primary">CC-22-DD</span></td>
+                                        <td className="text-end">
+                                            <a href="/condutor" className="btn btn-sm btn-outline-info me-1" title="Ver Detalhes">
+                                                <i className="bi bi-eye"></i>
+                                            </a>
+                                            <a href="/condutor/edit" className="btn btn-sm btn-outline-primary me-1" title="Editar">
+                                                <i className="bi bi-pencil"></i>
+                                            </a>
+                                            <a href="/condutores" className="btn btn-sm btn-outline-danger" title="Eliminar">
+                                                <i className="bi bi-trash"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div className="card-footer text-center">
+                        <small className="text-muted">Fim da lista. Existem 5 condutores registados.</small>
+                    </div>
+                </div>
+            </div>
+        </>
+    );
+};
+
+export default ListarCondutores;
