@@ -1,0 +1,103 @@
+import React from 'react';
+
+const ListarManutencoes = () => {
+    return (
+        <>
+            <div className="container py-4">
+                <header className="d-flex justify-content-between align-items-center mb-4">
+                    <h1 className="mb-0"><i className="bi bi-tools"></i> Lista de Manutenções</h1>
+                    <a href="/manutencao/create" className="btn btn-success">
+                        <i className="bi bi-plus-circle-fill"></i> Registar Nova Manutenção
+                    </a>
+                </header>
+
+                <div className="card shadow-sm">
+                    <div className="card-header py-3">
+                        <h5 className="mb-0"><i className="bi bi-table"></i> Manutenções Registadas</h5>
+                    </div>
+                    <div className="card-body">
+                        <div className="table-responsive">
+                            <table className="table table-hover table-sm align-middle">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Veículo (Matrícula)</th>
+                                        <th>Tipo de Manutenção</th>
+                                        <th>Custo</th>
+                                        <th>Data Manutenção</th>
+                                        <th>Próxima Manutenção</th>
+                                        <th className="text-end">Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>AA-11-BB</td>
+                                        <td>Mudança de Óleo e Filtros</td>
+                                        <td>120,50 €</td>
+                                        <td>10/03/2025</td>
+                                        <td>10/03/2026</td>
+                                        <td className="text-end">
+                                            <a href="/manutencao" className="btn btn-sm btn-outline-info me-1" title="Ver Detalhes">
+                                                <i className="bi bi-eye"></i>
+                                            </a>
+                                            <a href="/manutencao/edit" className="btn btn-sm btn-outline-primary me-1" title="Editar">
+                                                <i className="bi bi-pencil"></i>
+                                            </a>
+                                            <a href="/manutencoes" className="btn btn-sm btn-outline-danger" title="Eliminar">
+                                                <i className="bi bi-trash"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>CC-22-DD</td>
+                                        <td>Verificação de Pneus</td>
+                                        <td>30,00 €</td>
+                                        <td>15/01/2025</td>
+                                        <td>15/07/2025</td>
+                                        <td className="text-end">
+                                            <a href="/manutencao" className="btn btn-sm btn-outline-info me-1" title="Ver Detalhes">
+                                                <i className="bi bi-eye"></i>
+                                            </a>
+                                            <a href="/manutencao/edit" className="btn btn-sm btn-outline-primary me-1" title="Editar">
+                                                <i className="bi bi-pencil"></i>
+                                            </a>
+                                            <a href="/manutencoes" className="btn btn-sm btn-outline-danger" title="Eliminar">
+                                                <i className="bi bi-trash"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>AM-15-AS</td>
+                                        <td>Revisão Geral Anual</td>
+                                        <td>250,00 €</td>
+                                        <td>01/02/2025</td>
+                                        <td>01/02/2026</td>
+                                        <td className="text-end">
+                                            <a href="/manutencao" className="btn btn-sm btn-outline-info me-1" title="Ver Detalhes">
+                                                <i className="bi bi-eye"></i>
+                                            </a>
+                                            <a href="/manutencao/edit" className="btn btn-sm btn-outline-primary me-1" title="Editar">
+                                                <i className="bi bi-pencil"></i>
+                                            </a>
+                                            <a href="/manutencoes" className="btn btn-sm btn-outline-danger" title="Eliminar">
+                                                <i className="bi bi-trash"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div className="card-footer text-center">
+                        <small className="text-muted">Fim da lista. Existem 5 veículos registados.</small>
+                    </div>
+                </div>
+            </div>
+        </>
+    );
+};
+
+export default ListarManutencoes;
