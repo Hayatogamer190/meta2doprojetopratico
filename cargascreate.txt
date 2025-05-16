@@ -1,0 +1,69 @@
+import React from 'react';
+
+const CriarCarga = () => {
+    return (
+        <>
+            <main className="container py-4">
+                <header className="mb-4">
+                    <h1 className="mb-0"><i className="bi bi-plus-circle-fill"></i> Adicionar Nova Carga</h1>
+                    <p className="text-muted">Preencha os detalhes da nova carga.</p>
+                </header>
+
+                <div className="card shadow-sm">
+                    <div className="card-body">
+                        <form action="cargas_lista.html" method="POST">
+                            <div className="row g-3">
+                                <div className="col-md-6">
+                                    <label htmlFor="veiculo" className="form-label">Veículo Associado*</label>
+                                    <select className="form-select" id="veiculo" name="veiculo" required>
+                                        <option value="" disabled selected>Selecione um veículo...</option>
+                                        <option value="2">MH-15-56 (Opel Corsa, Ligeiro, Operacional)</option>
+                                        <option value="3">AM-15-AS (Mercedes A200, Ligeiro, Operacional)</option>
+                                        <option value="4">XY-99-ZZ (Volvo FH, Pesado Mercadorias, Em Manutenção)</option>
+                                    </select>
+                                </div>
+                                <div className="col-md-6">
+                                    <label htmlFor="tipo_de_carga" className="form-label">Tipo de Carga*</label>
+                                    <input type="text" className="form-control" id="tipo_de_carga" name="tipo_de_carga" placeholder="Ex: Paletes de material de construção" required />
+                                </div>
+                                <div className="col-md-6">
+                                    <label htmlFor="peso" className="form-label">Peso (kg)*</label>
+                                    <input type="number" className="form-control" id="peso" name="peso" step="0.01" placeholder="Ex: 1250.75" required />
+                                </div>
+                                <div className="col-md-6">
+                                    <label htmlFor="data_carga" className="form-label">Data da Carga/Transporte*</label>
+                                    <input type="date" className="form-control" id="data_carga" name="data_carga" required />
+                                </div>
+                                <div className="col-md-6">
+                                    <label htmlFor="local_origem" className="form-label">Local de Origem*</label>
+                                    <input type="text" className="form-control" id="local_origem" name="local_origem" placeholder="Ex: Armazém Lisboa" required />
+                                </div>
+                                <div className="col-md-6">
+                                    <label htmlFor="local_destino" className="form-label">Local de Destino*</label>
+                                    <input type="text" className="form-control" id="local_destino" name="local_destino" placeholder="Ex: Cliente Porto" required />
+                                </div>
+                                <div className="col-md-12">
+                                    <label htmlFor="frequencia" className="form-label">Frequência*</label>
+                                    <select className="form-select" id="frequencia" name="frequencia" required>
+                                        <option value="" disabled selected>Selecione a frequência...</option>
+                                        <option value="Única">Única</option>
+                                        <option value="Mensal">Mensal</option>
+                                        <option value="Semestral">Semestral</option>
+                                        <option value="Anual">Anual</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div className="mt-4 pt-3 border-top d-flex justify-content-end">
+                                <a href="/cargas" className="btn btn-outline-secondary me-2"><i className="bi bi-x-circle"></i> Cancelar</a>
+                                <button type="submit" className="btn btn-success"><i className="bi bi-check-circle-fill"></i> Guardar Carga</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </main>
+        </>
+    )
+}
+
+export default CriarCarga;
